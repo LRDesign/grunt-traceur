@@ -28,6 +28,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+    clean: ['test/tmp'],
     nodeunit: {
       tests: ['test/*_test.js']
     }
@@ -38,7 +39,8 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('default', ['traceur', 'nodeunit']);
+  grunt.registerTask('default', ['clean', 'traceur', 'nodeunit']);
 
 };

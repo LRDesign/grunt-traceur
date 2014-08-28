@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "es6-promises": "^1.0.8",
-    "traceur": "0.0.55"
+    "traceur": "git://github.com/google/traceur-compiler#bdae9f987a82795c8d41331b50570575cfb4a5e2"
   },
   "peerDependencies": {
     "grunt": "^0.4.4"
@@ -48,6 +48,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-nodeunit": "^0.4.1"
   },
   "keywords": [

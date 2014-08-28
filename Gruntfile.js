@@ -1,6 +1,6 @@
 /*
  * grunt-traceur
- * https://github.com/aaron/grunt
+ * https://github.com/aaronfrost/grunt
  *
  * Copyright (c) 2013 Aaron Frost
  * Licensed under the MIT license.
@@ -16,8 +16,9 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     traceur: {
       options: {
+        modules: 'commonjs',
+        experimental: true,
         sourceMaps: true
-        // traceur options here
       },
       test: {
         files: [{
@@ -28,6 +29,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+    clean: ['test/tmp'],
     nodeunit: {
       tests: ['test/*_test.js']
     }
@@ -38,7 +40,8 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('default', ['traceur', 'nodeunit']);
+  grunt.registerTask('default', ['clean', 'traceur', 'nodeunit']);
 
 };

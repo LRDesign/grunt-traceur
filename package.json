@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "es6-promises": "^1.0.8",
-    "traceur": "git://github.com/google/traceur-compiler"
+    "traceur": "git://github.com/google/traceur-compiler#bdae9f987a82795c8d41331b50570575cfb4a5e2"
   },
   "peerDependencies": {
     "grunt": "^0.4.4"
